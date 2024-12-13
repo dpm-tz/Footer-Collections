@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Responsive Footer</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* General Footer Styles */
+    footer {
+      background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Light blue gradient */
+      color: #fff;
+      padding: 50px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin: 15px;
+    }
+
+    .footer-column h3 {
+      color: #f1c40f;
+      margin-bottom: 15px;
+    }
+
+    .footer-column a {
+      color: #fff;
+      text-decoration: none;
+      margin: 5px 0;
+      display: block;
+      transition: padding-left 0.3s, color 0.3s;
+    }
+
+    .footer-column a:hover {
+      color: #f1c40f;
+      padding-left: 10px;
+    }
+
+    .footer-logo img {
+      width: 150px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo p {
+      color: #ddd;
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
+    .social-icons {
+      display: flex;
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      font-size: 1.5em;
+      margin-right: 10px;
+      color: #fff;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #f1c40f;
+      transform: scale(1.2);
+    }
+
+    .footer-newsletter form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-newsletter input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .footer-newsletter button {
+      padding: 10px 20px;
+      background-color: #f1c40f;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+
+    .footer-newsletter button:hover {
+      background-color: #e67e22;
+    }
+
+    .footer-legal {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    .footer-legal a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-legal a:hover {
+      color: #f1c40f;
+    }
+
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 1.5em;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .scroll-to-top:hover {
+      background: #f1c40f;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-column {
+        margin-bottom: 20px;
+      }
+
+      .footer-newsletter input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .footer-newsletter button {
+        width: 100%;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .social-icons a {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Footer -->
+  <footer>
+    <div class="footer-container">
+      <!-- About Us Section -->
+      <div class="footer-column footer-logo">
+        <img src="images/dpm.jpeg" alt="Logo">
+        <p>Learn more about our mission and values. Building a better tomorrow, today.</p>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Email: contact@yourwebsite.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#" class="fab fa-facebook"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-instagram"></a>
+        </div>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="footer-column footer-newsletter">
+        <h3>Stay Updated!</h3>
+        <form action="/submit-newsletter" method="POST">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer Legal Links -->
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll to Top Button
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = 'flex';
+      } else {
+        scrollToTopBtn.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

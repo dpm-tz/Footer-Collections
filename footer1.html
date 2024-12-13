@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Footer Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px; /* Add spacing between columns */
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 250px;
+            background-color: #00a000;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            font-size: 1rem;
+            color: #fff;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        .newsletter {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Spacing between input and button */
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            flex: 1; /* Make input field expand */
+            max-width: 400px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+            box-sizing: border-box; /* Prevent overflow issues */
+        }
+
+        .newsletter button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007000;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .newsletter button:hover {
+            background-color: #005000;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-column {
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .newsletter {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .newsletter input[type="email"] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .newsletter button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            footer {
+                padding: 20px 10px;
+            }
+
+            .footer-column {
+                padding: 15px;
+            }
+
+            .footer-column h3 {
+                font-size: 1rem;
+            }
+
+            .footer-column p,
+            .footer-column a {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3><i class="fas fa-map-marker-alt"></i> Our Locations</h3>
+            <p>Country: Tanzania</p>
+            <p>City: Dar Es Salaam</p>
+            <p>Street: Makumbusho</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-phone-alt"></i> Call us</h3>
+            <p>David: +255 745 360 418</p>
+            <p>Paul: +255 75 86 5709</p>
+            <p>Mwita: +255 75 438 7911</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-envelope"></i> Our Email</h3>
+            <p>david: <a href="mailto:david@gmail.com">david@gmail.com</a></p>
+            <p>Paul: <a href="mailto:paul@gmail.com">paul@gmail.com</a></p>
+            <p>Mwita: <a href="mailto:mwita@gmail.com">mwita@gmail.com</a></p>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Thematic Areas</h3>
+            <p>Climate Change</p>
+            <p>Circular Economy</p>
+            <p>Disaster Risk Reduction</p>
+        </div>
+        <div class="footer-column">
+            <h3>Newsletter</h3>
+            <form class="newsletter">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+        <div class="footer-column">
+            <h3>Follow us</h3>
+            <div>
+                <a href="#"><i class="fab fa-facebook-square" style="font-size:24px; color:#fff; margin-right:10px;"></i></a>
+                <a href="#"><i class="fab fa-twitter-square" style="font-size:24px; color:#fff; margin-right:10px;"></i></a>
+                <a href="#"><i class="fab fa-linkedin" style="font-size:24px; color:#fff;"></i></a>
+            </div>
+            <div class="logo" style="margin-top: 10px;">
+                <img src="images/dpm.jpeg" alt="GAYO Logo" style="width:100px;">
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
